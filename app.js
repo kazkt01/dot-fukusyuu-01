@@ -89,7 +89,49 @@ console.log(price * 140 * rate);
 */
 
 // 10、文字列を表現しよう
-
+/*
 console.log("It's  a pen"); //シングルクオーテーションでくくっている場合は、バックスラッシュが必要なときがある
-
 console.log("It's \na \npen"); //  \nを使うことで改行をすることができる<br/>タグみたいに
+*/
+
+// 11、文字列を操作してみよう
+// My name is Taro Yamada, call me Taro!
+/*
+const fname = "Taro";
+const lname = "Yamada";
+console.log("My name is " + fname + "" + lname + ",call me" + fname + "!");
+// テンプレートリテラルでの記述方法　←これ結構今までに見てきたAstroのブログ構築でも
+console.log(`My name is ${fname} ${lname},call me ${fname} `);
+*/
+
+//　12、数値か文字列かを意識しておこう
+/*
+console.log(50 + "20"); //　この場合は、計算されず連結されて文字列の2050になる
+const n = prompt("Any numver?"); //これめっちゃおもろいpromptは、使ったことなかった
+console.log(n + 10); //文字列の連結として機能してしまっている。基本promptで入力された値は、文字列として認識されるから
+// これを回避するには？
+console.log(Number(n) + 10); //Number(n)とすることで数値と認識できるみたいだTsみたいだねこれ
+*/
+
+//  ここからがかなり重要なポイント
+///////////////////////////////////
+
+// 13、ifで分岐してみよう
+
+/*
+
+> ~より大きい
+<　~より小さい
+>=　~以上
+<=  ~以下
+=== ~と等しい
+!=== ~と等しくない
+
+
+*/
+
+if (score >= 90) {
+  console.log("A!");
+} else {
+  console.log("B!");
+}
