@@ -113,12 +113,13 @@ console.log(n + 10); //文字列の連結として機能してしまっている
 console.log(Number(n) + 10); //Number(n)とすることで数値と認識できるみたいだTsみたいだねこれ
 */
 
-//  ここからがかなり重要なポイント
-///////////////////////////////////
+////////////////////////// ここからがかなり重要なポイント//////////////////
+/////////////////////////////////////////////////////////////////////////////
 
 // 13、ifで分岐してみよう
 
 /*
+比較演算子一覧
 
 > ~より大きい
 <　~より小さい
@@ -127,11 +128,95 @@ console.log(Number(n) + 10); //Number(n)とすることで数値と認識でき�
 === ~と等しい
 !=== ~と等しくない
 
+if (score >= 90) {
+  console.log("A!");
+} 
 
 */
 
+//　14、　if...else...で条件分岐をしてみよう
+/*
+const score = Number(prompt("Score?")); //この段階で直接Numberで数値に変換
 if (score >= 90) {
-  console.log("A!");
+  alert("A!");
 } else {
-  console.log("B!");
+  alert("Not A!");
+}
+*/
+
+// 15、 else if ... で条件をつなげてみよう
+
+// const score = Number(prompt("Score?"));
+
+// if (score >= 90) {
+//   alert("A!");
+// } else if (score >= 70) {
+//   alert("B!");
+// } else {
+//   alert("C!");
+// }
+// 自習
+// const hoge = Number(prompt("number ?"));
+// if (hoge >= 80) {
+//   alert("合格!");
+// } else if (hoge >= 50) {
+//   alert("頑張ろう！");
+// } else {
+//   alert("1からやり直そう");
+// }
+
+// 16、switchで条件分岐をしてみよう ←これあんまり使ったことない
+// ifでも表現できるが取りうる値が決まっている場合は、switchの方がスッキリ描ける場合がある
+// とのこと
+
+/*
+const color = prompt("Color?");
+switch (color) {
+  case "red":
+    alert("Stop!");
+    break;
+  case "yellow":
+    alert("Slow Down");
+    break;
+  case "blue":
+  case "green": //case二つでcase1もしくは、case2の場合的なことができる
+    alert("Go!");
+    break;
+  default: // ←上記のどれにも当てはまらない場合
+    alert("Wrong Color!");
+}
+ */
+
+// 17、forの仕組みを理解しよう　反復処理について
+/*
+//letを使っている理由がポイントiに1を足して再代入するのでletにしている
+for (let i = 0; i < 3; i++) {
+  alert("Hello");
+}
+*/
+
+// 18、forで反復処理をしてみよう
+
+// for (let i = 0; i < 10; i++) {
+//   //   alert("Hellow");
+//   console.log(`${i}:Hello`);
+// }
+/*
+//　Q, i の略は？　A,indexもしくはiteratorの略と解釈していることが多いように思います
+for (let i = 1; i <= 10; i++) {
+  //   alert("Hellow");
+  console.log(`${i}:Hello`);
+}
+  */
+
+// 19、forの中でforをつかてみよう
+
+// amount ←数量
+
+const rate = 1.1;
+
+for (let price = 150; price <= 160; price++) {
+  console.log(`Price: ${price}`);
+  for (let amount = 120; amount <= 140; amount += 10)
+    console.log(price * amount * rate);
 }
