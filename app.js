@@ -272,17 +272,50 @@ for (let year = 1; year <= 30; year++) {
 //  #24 条件（三項）演算子を使ってみよう　←これは頻繁に使う
 // 簡単な処理であれば条件演算子だけで十分だが複雑化していくとあまり向いていない
 
+/*
 const score = Number(prompt("Score?"));
 const result = score > 80 ? "A" : "B";
 console.log(result);
 
+*/
+
 // #25 論理演算子を使ってみよう　←複雑なものにおすすめ
 
+/*
 const english = Number(prompt("English?"));
 const math = Number(prompt("Math?"));
 
-if (!(english >= 80 && math >= 80)) {
+// &&←尚且つ
+if (english >= 80 && math >= 80) {
   console.log("A");
 } else {
   console.log("B");
 }
+// ! は、では、なかったらになる
+// ||　　←　もしくは
+if (!(english >= 80 || math >= 80)) {
+  console.log("A");
+} else {
+  console.log("B");
+}
+  */
+
+//  #26 スコープの仕組みを理解しよう
+// 定数や変数には、それを参照可能な範囲が決まっていてそれをスコープと呼ぶとのこと
+
+// グローバルスコープとローカルスコープの違い
+
+let x = 10; //グローバルスコープ
+
+{
+  //ローカルスコープ
+  let y = 20; // ←＊重要：変数や定数がローカルスコープになるのは、ブロック内で宣言した時だけ
+  console.log(y); //ブロック内でしか確認できない
+}
+
+// console.log(y);　//ブロック内でしか参照でいきない。
+console.log(x);
+
+// 遊び
+// const result = Number(prompt("数値を入力してください"));
+// document.getElementById("fire").innerHTML = result;
