@@ -212,11 +212,77 @@ for (let i = 1; i <= 10; i++) {
 // 19、forの中でforをつかてみよう
 
 // amount ←数量
-
+/*
 const rate = 1.1;
 
 for (let price = 150; price <= 160; price++) {
   console.log(`Price: ${price}`);
   for (let amount = 120; amount <= 140; amount += 10)
     console.log(price * amount * rate);
+}
+*/
+
+//２０、whileで反復処理をしてみよう
+// 繰り返す範囲が決まっていればforを使って決まっていない場合は、whileを使おう
+
+// const command = Number(prompt("Menu 1,2,3 or 0 to exit"));
+// console.log(`Menu ${command} processed`);
+
+/*
+let command = Number(prompt("Menu 1,2,3 or 0 to exit"));
+while (command !== 0) {
+  console.log(`Menu ${command} processed`);
+  command = Number(prompt(`Menu 1,2,3 or 0 to exit`));
+}
+*/
+
+//21、　do ..while を使ってみよう
+
+/*
+let command;
+
+do {
+  command = Number(prompt(`Menu 1.2.3 or 0 to exit`));
+  if (command === 0) {
+    alert("exited");
+  } else {
+    alert(`Menu ${command} processed`);
+  }
+} while (command !== 0);
+*/
+
+// 21、 #23 break､continueを使ってみよう　←講座番号ズレてるけどここで修正
+/*
+let amount = 100;
+
+for (let year = 1; year <= 30; year++) {
+  amount *= 1.05;
+  if (amount < 200) {
+    continue; //反復処理の途中でそれ以降の処理をスキップして処理する方法
+  }
+  if (amount > 300) {
+    //300超えたら処理を抜けるというやりかた
+    break; //反復処理から抜けるための命令
+  }
+  console.log(`Year ${year}:${amount}`);
+}
+// 上記のcontinueとbreakは、whileやdo whileでも使えるとのこと
+*/
+
+//  #24 条件（三項）演算子を使ってみよう　←これは頻繁に使う
+// 簡単な処理であれば条件演算子だけで十分だが複雑化していくとあまり向いていない
+
+const score = Number(prompt("Score?"));
+const result = score > 80 ? "A" : "B";
+console.log(result);
+
+// #25 論理演算子を使ってみよう　←複雑なものにおすすめ
+
+const english = Number(prompt("English?"));
+const math = Number(prompt("Math?"));
+
+if (!(english >= 80 && math >= 80)) {
+  console.log("A");
+} else {
+  console.log("B");
 }
