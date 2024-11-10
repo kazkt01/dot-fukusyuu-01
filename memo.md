@@ -21,7 +21,7 @@ JavaScript 入門 基礎文法編 (重点的に復習しよう)
 
 <!--  -->
 
-これめっちゃおもろい prompt は、使ったことなかった
+prompt ←alert 的な入力できるやつ便利そういえばあんま使ったことなかった
 const n = prompt("Any number?");
 
 <!-- ここがコア -->

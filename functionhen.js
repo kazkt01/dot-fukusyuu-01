@@ -191,6 +191,16 @@ switch (shingou) {
 
 document.getElementById("fire").innerHTML = result;
 
+function calc2(a, b) {
+  return a + b;
+}
+
+const sumA = calc2(1, 2);
+
+const resultValue = sumA >= 10 ? "A" : "B";
+
+console.log(resultValue);
+
 /* ........ memo　.......
 >      > ~より大きい
 >      <　~より小さい
