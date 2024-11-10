@@ -69,36 +69,98 @@ document.getElementById("fire").innerHTML = n;
 
 // document.getElementById("fire").innerHTML = result;
 
-let num = Number(prompt("number?")); // 入力された値を検知
-let resultA;
+// let num = Number(prompt("number?")); // 入力された値を検知
+// let resultA;
 
-function funcA(num) {
-  //promptで入力されたnumを使用し計算する関数
-  return num + 1;
+// function funcA(num) {
+//   //promptで入力されたnumを使用し計算する関数
+//   return num + 1;
+// }
+
+// const resultB = funcA(num); //　ここに格納
+
+// console.log(resultB); // 確認
+
+// if (resultB >= 50) {
+//   resultA = `${resultB}で合格です`;
+// } else {
+//   resultA = `${resultB}です.頑張ってください`;
+// }
+
+// document.getElementById("fire").innerHTML = resultA;
+/*
+let num = Number(prompt("number?"));
+
+const funcA = (num) => {
+  return num * 2;
+};
+
+const resultA = funcA(num);
+
+console.log(resultA);
+
+// const resultB = resultA > 90 ? "いい感じ" : "よくないね";
+// 三項演算子の復習
+const resultB =
+  resultA > 90 ? `${resultA}点でいい感じ` : `${resultA}点でよくないね`;
+document.getElementById("fire").innerHTML = resultB;
+*/
+
+//  #04 返り値のない関数を作ろう
+
+// function sum(a, b) {
+//   return a + b;
+// }
+
+// console.log(sum(100, 200));
+
+// returnを使わない記述もある
+// function sum(a, b) {
+//   console.log(a + b);
+//   return a + b;
+// }
+// sum(100, 200);
+
+//  #05 returnの挙動を理解しよう
+
+// 内容理解のため復習しても良さげなセクション
+
+//　 #06 引数にデフォルト値を設定しよう　←これはかなり便利
+
+// 引数に　= 1.1 みたいな感じで日引数で値が指定されなかった場合デフォルト値として設定できる
+
+/*
+function calculateTotal(price, amount, rate = 1.1) {
+  return price + amount + rate;
+}
+console.log(calculateTotal(100, 10));
+console.log(calculateTotal(150, 10));
+console.log(calculateTotal(100, 10, 1.08));
+*/
+
+//  #07 処理の途中でreturnしてみよう
+
+function calculateTotal(price, amount, rate = 1.1) {
+  if (amount >= 100) {
+    return price * amount;
+  } else {
+    return price * amount * rate;
+  }
 }
 
-const resultB = funcA(num); //　ここに格納
+console.log(calculateTotal(100, 10));
+console.log(calculateTotal(150, 10));
+console.log(calculateTotal(100, 10, 1.08));
 
-console.log(resultB); // 確認
-
-if (resultB >= 50) {
-  resultA = `${resultB}で合格です`;
-} else {
-  resultA = `${resultB}です.頑張ってください`;
-}
-
-document.getElementById("fire").innerHTML = resultA;
-
-/*           memo
-> ~より大きい
-> <　~より小さい
-> =　~以上
-> <= ~以下
-> === ~と等しい
-> !=== ~と等しくない
+/* ........ memo　.......
+>      > ~より大きい
+>      <　~より小さい
+>      >=　~以上
+>      <= ~以下
+>      === ~と等しい
+>      !=== ~と等しくない
 //////////////////////////
-||　　←　もしくは
-&&←尚且つ
-! は、では、なかったらになる
-
+>       ||　　←　もしくは
+>       &&   ←尚且つ
+>       ! は、では、なかったらになる
 */

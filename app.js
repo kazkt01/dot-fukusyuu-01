@@ -286,7 +286,7 @@ const english = Number(prompt("English?"));
 const math = Number(prompt("Math?"));
 
 // &&←尚且つ
-if (english >= 80 && math >= 80) {
+if (english >= 80 && math >= 70) {
   console.log("A");
 } else {
   console.log("B");
