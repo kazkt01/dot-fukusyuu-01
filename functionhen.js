@@ -47,4 +47,4 @@ document.getElementById("fire").innerHTML = n;
 // }
 // document.getElementById("fire").innerHTML = func1(num);
 
-//  #03 処理の流れを確認しよう
+//  #03 処理の流れを確認しよう　←ここが関数の理解の肝
