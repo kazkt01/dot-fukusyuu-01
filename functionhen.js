@@ -140,17 +140,56 @@ console.log(calculateTotal(100, 10, 1.08));
 
 //  #07 処理の途中でreturnしてみよう
 
-function calculateTotal(price, amount, rate = 1.1) {
-  if (amount >= 100) {
-    return price * amount;
-  } else {
-    return price * amount * rate;
-  }
+// function calculateTotal(price, amount, rate = 1.1) {
+//   if (amount >= 100) {
+//     return price * amount;
+//   } else {
+//     return price * amount * rate;
+//   }
+// }
+
+// console.log(calculateTotal(100, 10));
+// console.log(calculateTotal(150, 10));
+// console.log(calculateTotal(100, 10, 1.08));
+
+// let num = Number(prompt("入力してください"));
+
+// function calc(num) {
+//   return num + 1;
+// }
+// console.log(calc(num));
+
+// const result = calc(num);
+
+// // if分
+
+// // if (result >= 10) {
+// //   alert(`${result}でいいね`);
+// // } else {
+// //   alert(`${result}でよくないね`);
+// // }
+
+// // 三項演算子
+// const resultA =
+//   result >= 10 ? alert(`${result}でいいね`) : alert(`${result}でよくないね`);
+
+const shingou = prompt("red or yellow or green ");
+let result;
+
+switch (shingou) {
+  case "red":
+    result = "止まれ!";
+    break;
+  case "yellow":
+    result = "あともう少し待て!";
+
+    break;
+  case "green":
+    result = "行ってよし！";
+    break;
 }
 
-console.log(calculateTotal(100, 10));
-console.log(calculateTotal(150, 10));
-console.log(calculateTotal(100, 10, 1.08));
+document.getElementById("fire").innerHTML = result;
 
 /* ........ memo　.......
 >      > ~より大きい
