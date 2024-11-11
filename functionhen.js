@@ -173,33 +173,60 @@ console.log(calculateTotal(100, 10, 1.08));
 // const resultA =
 //   result >= 10 ? alert(`${result}でいいね`) : alert(`${result}でよくないね`);
 
-const shingou = prompt("red or yellow or green ");
-let result;
+// const shingou = prompt("red or yellow or green ");
+// let result;
 
-switch (shingou) {
-  case "red":
-    result = "止まれ!";
-    break;
-  case "yellow":
-    result = "あともう少し待て!";
+// switch (shingou) {
+//   case "red":
+//     result = "止まれ!";
+//     break;
+//   case "yellow":
+//     result = "あともう少し待て!";
 
-    break;
-  case "green":
-    result = "行ってよし！";
-    break;
+//     break;
+//   case "green":
+//     result = "行ってよし！";
+//     break;
+// }
+
+// document.getElementById("fire").innerHTML = result;
+
+// function calc2(a, b) {
+//   return a + b;
+// }
+// const sumA = calc2(1, 2);
+
+// const resultValue = sumA >= 10 ? "A" : "B";
+
+// console.log(resultValue);
+
+//  #07 処理の途中でreturnしてみよう
+
+// ifでreturnを分岐で返すのはシンプルにできる
+
+// amount(数値が100以上なら税金分を無料にする関数)
+// function calculateTotal(price, amount, rate = 1.1) {
+//   //   if (amount >= 100) {
+//   //     return price * amount;
+//   //   } else {
+//   //     return price * amount * rate;
+//   //   }
+//   //   console.log(calculateTotal(100, 100));
+//   //   console.log(calculateTotal(100, 10));
+
+//   //
+//   if (amount >= 100) {
+//     return price * amount;
+//   } //elseを削っても成立する？
+//   return price * amount * rate;
+// }
+
+//  #08 引数のスコープを確認しよう
+
+function double(num) {
+  return num * 2;
 }
-
-document.getElementById("fire").innerHTML = result;
-
-function calc2(a, b) {
-  return a + b;
-}
-
-const sumA = calc2(1, 2);
-
-const resultValue = sumA >= 10 ? "A" : "B";
-
-console.log(resultValue);
+console.log(double(10));
 
 /* ........ memo　.......
 >      > ~より大きい
