@@ -223,10 +223,14 @@ console.log(calculateTotal(100, 10, 1.08));
 
 //  #08 引数のスコープを確認しよう
 
-function double(num) {
-  return num * 2;
+// function double(num) {
+//   return num * 2;
+// }
+// console.log(double(10));
+
+function calculateTotal(a, b) {
+  return a + b;
 }
-console.log(double(10));
 
 /* ........ memo　.......
 >      > ~より大きい
