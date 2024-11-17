@@ -16,4 +16,7 @@ body {
 .box.active {
   left: 300px;
   top: 300px;
+}
+.box.active2 {
+  left: 600px;
 }/*# sourceMappingURL=home.css.map */

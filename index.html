@@ -58,11 +58,18 @@
       // });
 
       let num = Number(prompt("number?"));
-
       if (num >= 10) {
-        anima.classList.toggle("active");
+        anima.classList.add("active");
       } else {
+        const func = (num) => {
+          return num + 40;
+        };
+        console.log(func(num));
       }
+
+      anima.addEventListener("click", () => {
+        anima.classList.add("active2");
+      });
 
       function getInputValue() {
         const inputElement = document.getElementById("myInput");
