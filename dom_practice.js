@@ -17,6 +17,7 @@
 
 // console.log("hellow");
 
+/*
 //  #04 classListでスタイルを操作してみよう
 document.querySelector("button").addEventListener("click", () => {
   document.querySelector("p").classList.toggle("pink-bg", "red-border");
@@ -32,4 +33,6 @@ document.querySelector("button").addEventListener("click", () => {
   toggleBtn.classList.toggle("red-border");
 });
 
-//
+*/
+
+// インプットバリュー読み込みしてみる遊び

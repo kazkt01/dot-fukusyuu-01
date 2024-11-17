@@ -56,3 +56,5 @@ do while も活用する
 #01 DOM について理解しよう　 ←dom の仕組み
 
 #04 classList でスタイルを操作してみよう
+
+<!--fetch API  --> dbとのやりとり
