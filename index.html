@@ -28,23 +28,42 @@
   </style>
   <body>
     <div>
-      <h1>JavaScritpの復習</h1>
-      <!-- <p id="fire">
-    </p> -->
-      <div>
-        <p class="green-color">Hello</p>
-        <button>OK</button>
+      <h1 style="border-bottom: 1px solid #333">JavaScritpの復習</h1>
+      <h3>Animation</h3>
+      <div class="animation-box">
+        <div id="box" class="box"></div>
       </div>
     </div>
 
+    <!-- <p id="fire">
+          </p> -->
+    <!-- <div>
+              <p class="green-color">Hello</p>
+              <button>OK</button>
+            </div> -->
+
+    <!-- <div id="sweet"></div>
     <div>
       <input id="myInput" type="text" placeholder="何か入力してみてください" />
       <div>
         <button onclick="getInputValue()">Submit</button>
       </div>
       <div id="output"></div>
-    </div>
+    </div> -->
     <script>
+      const anima = document.getElementById("box");
+
+      // anima.addEventListener("click", () => {
+      //   anima.classList.toggle("active");
+      // });
+
+      let num = Number(prompt("number?"));
+
+      if (num >= 10) {
+        anima.classList.toggle("active");
+      } else {
+      }
+
       function getInputValue() {
         const inputElement = document.getElementById("myInput");
         const inputValue = inputElement.value;
@@ -55,29 +74,7 @@
         const outputElement = document.getElementById("output");
         outputElement.appendChild(pElement);
       }
-
-      // 遊び
-      let num = Number(prompt("number？"));
-      const result = (num) => {
-        return num * 20;
-      };
-      console.log(result(num));
-
-      if (result(num) >= 40) {
-        alert("40以上");
-      } else {
-        alert("40以下");
-      }
-
-      let a = 2;
-      let b = 3;
-      const funcA = (a, b) => {
-        return a * 30;
-      };
-      const resultA = funcA(3, 4);
-      console.log(resultA);
     </script>
-
     <script src="./dom_practice.js"></script>
     <script src="./functionhen.js"></script>
     <script src="./output.js"></script>

@@ -19,3 +19,25 @@
 //     console.log("Hellow");
 //   }
 // }
+
+//   // 遊び
+//   let num = Number(prompt("number？"));
+//   const result = (num) => {
+//     return num * 20;
+//   };
+//   console.log(result(num));
+
+//   if (result(num) >= 40) {
+//     alert("40以上");
+//   } else {
+//     alert("40以下");
+//     document.getElementById("sweet").innerHTML = "40以下";
+//   }
+
+//   let a = 2;
+//   let b = 3;
+//   const funcA = (a, b) => {
+//     return a * 30;
+//   };
+//   const resultA = funcA(3, 4);
+//   console.log(resultA);

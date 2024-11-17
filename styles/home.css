@@ -1,3 +1,19 @@
 body {
   text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.box {
+  background: #000;
+  height: 50px;
+  width: 50px;
+  transition: all 0.3s;
+  position: fixed;
+  top: 10px;
+  left: 100px;
+  transition: all 5s;
+}
+.box.active {
+  left: 300px;
+  top: 300px;
 }/*# sourceMappingURL=home.css.map */
